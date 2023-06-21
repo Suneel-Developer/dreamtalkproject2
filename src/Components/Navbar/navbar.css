@@ -1,0 +1,123 @@
+section{
+  padding: 0% 7%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  gap: 1rem;
+  position: relative;
+  top: 0;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+.header .nav_content ul {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+.header .nav_content ul li a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: .3s;
+}
+.header .nav_content ul li a:hover{
+  color: #12141D;
+}
+.nav_content ul li a.active {
+  font-weight: 500;
+}
+.contactBtn{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 3rem;
+}
+.contactBtn .btn {
+  border: none;
+  outline: none;
+  position: relative;
+  background-color: #ffffff;
+  padding: 14px 18px;
+  border-radius: 10px;
+  color: #01b1f2;
+  font-weight: 400;
+  font-size: 15px;
+  cursor: pointer;
+  line-height: 24px;
+  transition: .3s;
+  z-index: +1;
+  overflow: hidden;
+}
+
+.contactBtn .btn::before{
+  content: '';
+  top: 0;
+  left: 0;
+  background: #1b1844;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  transition: .5s;
+}
+.contactBtn .btn:hover::before{
+  width: 100%;
+
+}
+.contactBtn .btn:hover{
+  color: #ffffff;
+
+}
+.toggleBtn {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 25px;
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .toggleBtn {
+    display: block;
+  }
+  .header .nav_content ul {
+    display: none;
+  }
+  .header .mobile-menu-link ul {
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 100;
+    background-color: #ffff;
+    border-bottom: 3px solid #0081f1;
+    height: auto;
+    transition: 3s;
+    padding: 20px;
+}
+.header .mobile-menu-link ul li a{
+      color: #0081f1;
+  }
+  .contactBtn .btn {
+    background-color: #0081f1;
+    color: #ffffff;
+  }
+  .contactBtn{
+    margin-left: 0rem;
+}
+}

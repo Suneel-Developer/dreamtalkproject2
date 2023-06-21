@@ -1,0 +1,115 @@
+.aboutus_container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  padding: 1% 7%;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+.about_content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 600px;
+}
+.about_content h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 10px;
+}
+.about_content h1 span {
+  color: rgba(1, 171, 242, 1);
+}
+.about_content p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #1b1844;
+}
+.about_content ul li {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.75);
+}
+.about_content ul li .dotIcon {
+  font-size: 2rem;
+}
+.about_content .btn {
+  padding: 0px 22px;
+  width: 136px;
+  height: 46px;
+  position: relative;
+  background: linear-gradient(285.51deg, #0081f1 13.15%, #00b2f1 78.35%);
+  border-radius: 10px;
+  outline: 1px solid linear-gradient(285.51deg, #0081f1 13.15%, #00b2f1 78.35%);
+  border: none;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: .3s ;
+  z-index: +1;
+  overflow: hidden;
+
+}
+
+.about_content .btn::before{
+  content: '';
+  top: 0;
+  left: 0;
+  background: #1b1844;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  transition: .5s;
+}
+.about_content .btn:hover::before{
+  width: 100%;
+}
+.about_img {
+  width: 500px;
+}
+.about_img img {
+  width: 100%;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .aboutus_container {
+        grid-template-columns: 1fr ;
+      }
+      .about_img {
+        width: 100%;
+        margin-top: 3rem;
+      }
+}
+
+@media screen and (max-width: 468px) {
+    
+.about_content h1 {
+    font-size: 30px;
+  }
+  .about_content p {
+    font-size: 13px;
+  }
+  .about_content ul li {
+    font-size: 12px;
+  }
+  .about_content ul li .dotIcon {
+    font-size: 2rem;
+  }
+  .about_content .btn {
+    width: 120px;
+    font-size: 12px;
+  }
+}

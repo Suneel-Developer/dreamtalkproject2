@@ -1,0 +1,100 @@
+footer {
+  display: grid;
+  grid-template-columns: 1fr 0.12fr 0.12fr 0.12fr;
+  gap: 2rem;
+  padding: 5% 7%;
+  background: linear-gradient(285.51deg, #0081f1 13.15%, #00b2f1 78.35%);
+  backdrop-filter: blur(12.5px);
+}
+.fheading {
+  max-width: 500px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 40px;
+  color: #f4f3ff;
+}
+.col ul {
+  list-style: none;
+}
+.col ul li a{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17.9377px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #e6e5f2;
+  transition: .3s;
+}
+.col ul li a:hover{
+  margin-left: 2px;
+  color: rgba(69, 67, 91, 1);
+}
+.col ul li:nth-child(1) {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19.1336px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #f4f3ff;
+  margin-bottom: 1rem;
+}
+
+.subscribeInput {
+  display: flex;
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #f4f2ff;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 5px;
+}
+.subscribeInput input {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+}
+.subscribeInput img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.subscribeInput input::placeholder{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* ---------------------------------------------------------- media queries Response */
+@media screen and (max-width: 950px) {
+  footer {
+    display: block;
+  }
+  .col {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 468px) {
+    .fheading {
+        max-width: 100%;
+        font-size: 25px;
+      }
+      
+      .subscribeInput {
+        max-width: 100%;
+      }
+  }
